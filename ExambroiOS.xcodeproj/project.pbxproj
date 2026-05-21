@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14139CF1EBC5E29A98A73412 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40A79FA91FA0FF56E5B60A /* LoginView.swift */; };
+		144A28C268B03B8647394967 /* QRScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14193EE781C6DB484DD645F /* QRScanView.swift */; };
+		24D251F76AA7E041EDEF374C /* ScreenshotService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3494F176F8C0387D339EF5FA /* ScreenshotService.swift */; };
+		2D468B0DBF127EDEC55A87FE /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8272003E16A0A78CB22A8CC2 /* AppNavigator.swift */; };
+		30048FD3F42FB037EE7C6C24 /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7011E614D6AFBCBCA61C1950 /* ConfigManager.swift */; };
+		3C4888256A810CEBD26471E5 /* TOTPUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E814F03B977468835F14C21 /* TOTPUtil.swift */; };
+		3D0056C534B69201EA8B1D90 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984528BA8F3961C0F820CF61 /* Models.swift */; };
+		42D77BE772ABC1F365C27857 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DA937E8B13C863054C4FF0 /* APIClient.swift */; };
+		43C2E1815CDD7FEFE2072574 /* ExamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFC994DFA99258026D8A638 /* ExamView.swift */; };
+		4897AE01F4D13B01E70B2701 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DD4D29C2F0CEE20A6AA5CB87 /* PrivacyInfo.xcprivacy */; };
+		4977858CD164553BEAB57F3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD5DB3AB05F59EA90A554B46 /* Assets.xcassets */; };
+		4E10C9436A75D803AF1EF0EF /* DemoAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2EFFB005E6C95E7FD3D4DD /* DemoAccount.swift */; };
+		5066820593300711B53DA6C7 /* SecurityMonitorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383FC5406B80747BC70D0063 /* SecurityMonitorService.swift */; };
+		5C582C8FBF3E7026457B6201 /* DeviceFingerprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827C2E935726C03709886E7B /* DeviceFingerprint.swift */; };
+		74BB8CBF14A38E142216DF93 /* CryptoUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A32533474B0C6392522E09 /* CryptoUtil.swift */; };
+		8A60A0AF18A3340BF7D7C2DA /* ExambroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D1AAA51A82E601D195409C /* ExambroApp.swift */; };
+		A734B07EF2A5DBE531976230 /* RealtimeWebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7467D862D08E4C4552EEB /* RealtimeWebSocketClient.swift */; };
+		BDAD1A5092BA26125CAD1F84 /* ExamWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D07965B9250EE51CA5E117 /* ExamWebView.swift */; };
+		C8B14450E553318056AF8EA5 /* LockdownCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E994505C9C14136B5C601F /* LockdownCheckView.swift */; };
+		FF2357B22F32BD0E4B299C4F /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F53BB7858852421D43659 /* NetworkMonitor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		17C7467D862D08E4C4552EEB /* RealtimeWebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeWebSocketClient.swift; sourceTree = "<group>"; };
+		19D07965B9250EE51CA5E117 /* ExamWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamWebView.swift; sourceTree = "<group>"; };
+		3494F176F8C0387D339EF5FA /* ScreenshotService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotService.swift; sourceTree = "<group>"; };
+		383FC5406B80747BC70D0063 /* SecurityMonitorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityMonitorService.swift; sourceTree = "<group>"; };
+		3E814F03B977468835F14C21 /* TOTPUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPUtil.swift; sourceTree = "<group>"; };
+		48D76B6175EE60ED360A7461 /* ExambroiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExambroiOS.entitlements; sourceTree = "<group>"; };
+		4F1F53BB7858852421D43659 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		7011E614D6AFBCBCA61C1950 /* ConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigManager.swift; sourceTree = "<group>"; };
+		80D1AAA51A82E601D195409C /* ExambroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExambroApp.swift; sourceTree = "<group>"; };
+		8272003E16A0A78CB22A8CC2 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
+		827C2E935726C03709886E7B /* DeviceFingerprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceFingerprint.swift; sourceTree = "<group>"; };
+		84E994505C9C14136B5C601F /* LockdownCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockdownCheckView.swift; sourceTree = "<group>"; };
+		984528BA8F3961C0F820CF61 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		9A2EFFB005E6C95E7FD3D4DD /* DemoAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAccount.swift; sourceTree = "<group>"; };
+		A14193EE781C6DB484DD645F /* QRScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanView.swift; sourceTree = "<group>"; };
+		A6A32533474B0C6392522E09 /* CryptoUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoUtil.swift; sourceTree = "<group>"; };
+		A6DA937E8B13C863054C4FF0 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		AC40A79FA91FA0FF56E5B60A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AD5DB3AB05F59EA90A554B46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BBFC994DFA99258026D8A638 /* ExamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamView.swift; sourceTree = "<group>"; };
+		D64EBFB67D2F65C681C0B9FD /* ExambroiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExambroiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD4D29C2F0CEE20A6AA5CB87 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		E73A295B7F16C508AA5DBC86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1C4FF50E2F7B1B4D05937923 /* ExambroiOS */ = {
+			isa = PBXGroup;
+			children = (
+				8272003E16A0A78CB22A8CC2 /* AppNavigator.swift */,
+				AD5DB3AB05F59EA90A554B46 /* Assets.xcassets */,
+				9A2EFFB005E6C95E7FD3D4DD /* DemoAccount.swift */,
+				80D1AAA51A82E601D195409C /* ExambroApp.swift */,
+				48D76B6175EE60ED360A7461 /* ExambroiOS.entitlements */,
+				E73A295B7F16C508AA5DBC86 /* Info.plist */,
+				DD4D29C2F0CEE20A6AA5CB87 /* PrivacyInfo.xcprivacy */,
+				95551876071D64D9B329BD78 /* Config */,
+				B3F8BE3AB4B9887B776AC419 /* Network */,
+				E4F8AB47613246D01D3299F6 /* Services */,
+				22CDF5AF4D0E374F9BFD0047 /* Util */,
+				A026D471BC250CC9EE66C73E /* Views */,
+			);
+			path = ExambroiOS;
+			sourceTree = "<group>";
+		};
+		22CDF5AF4D0E374F9BFD0047 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A6A32533474B0C6392522E09 /* CryptoUtil.swift */,
+				827C2E935726C03709886E7B /* DeviceFingerprint.swift */,
+				3E814F03B977468835F14C21 /* TOTPUtil.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		474FDE697D2E4E242D190D3E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				984528BA8F3961C0F820CF61 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		72BC402CE669DEAB4A91FDA8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				84E994505C9C14136B5C601F /* LockdownCheckView.swift */,
+				AC40A79FA91FA0FF56E5B60A /* LoginView.swift */,
+				A14193EE781C6DB484DD645F /* QRScanView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		95551876071D64D9B329BD78 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				7011E614D6AFBCBCA61C1950 /* ConfigManager.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		9C278E452FFB150D102F1748 /* Exam */ = {
+			isa = PBXGroup;
+			children = (
+				BBFC994DFA99258026D8A638 /* ExamView.swift */,
+				19D07965B9250EE51CA5E117 /* ExamWebView.swift */,
+			);
+			path = Exam;
+			sourceTree = "<group>";
+		};
+		A026D471BC250CC9EE66C73E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9C278E452FFB150D102F1748 /* Exam */,
+				72BC402CE669DEAB4A91FDA8 /* Login */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B3F8BE3AB4B9887B776AC419 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A6DA937E8B13C863054C4FF0 /* APIClient.swift */,
+				17C7467D862D08E4C4552EEB /* RealtimeWebSocketClient.swift */,
+				474FDE697D2E4E242D190D3E /* Models */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D5DE6E64ED16C8136B282F83 = {
+			isa = PBXGroup;
+			children = (
+				1C4FF50E2F7B1B4D05937923 /* ExambroiOS */,
+				ED16437F3B41AD1648EA5766 /* Products */,
+			);
+			indentWidth = 4;
+			sourceTree = "<group>";
+			tabWidth = 4;
+			usesTabs = 0;
+		};
+		E4F8AB47613246D01D3299F6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4F1F53BB7858852421D43659 /* NetworkMonitor.swift */,
+				3494F176F8C0387D339EF5FA /* ScreenshotService.swift */,
+				383FC5406B80747BC70D0063 /* SecurityMonitorService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ED16437F3B41AD1648EA5766 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D64EBFB67D2F65C681C0B9FD /* ExambroiOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C7AE152981DE8F4D811D94B /* ExambroiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1CC68CBC00AE2F994D55776 /* Build configuration list for PBXNativeTarget "ExambroiOS" */;
+			buildPhases = (
+				7B940C3C520E68DB03CA45DB /* Sources */,
+				463792B293AE5F93881B29E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExambroiOS;
+			packageProductDependencies = (
+			);
+			productName = ExambroiOS;
+			productReference = D64EBFB67D2F65C681C0B9FD /* ExambroiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		68811AC8E6A93ACA8CDE9BA0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					2C7AE152981DE8F4D811D94B = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 150718D8D5539F8334DD0526 /* Build configuration list for PBXProject "ExambroiOS" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = D5DE6E64ED16C8136B282F83;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = ED16437F3B41AD1648EA5766 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C7AE152981DE8F4D811D94B /* ExambroiOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		463792B293AE5F93881B29E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4977858CD164553BEAB57F3D /* Assets.xcassets in Resources */,
+				4897AE01F4D13B01E70B2701 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7B940C3C520E68DB03CA45DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42D77BE772ABC1F365C27857 /* APIClient.swift in Sources */,
+				2D468B0DBF127EDEC55A87FE /* AppNavigator.swift in Sources */,
+				30048FD3F42FB037EE7C6C24 /* ConfigManager.swift in Sources */,
+				74BB8CBF14A38E142216DF93 /* CryptoUtil.swift in Sources */,
+				4E10C9436A75D803AF1EF0EF /* DemoAccount.swift in Sources */,
+				5C582C8FBF3E7026457B6201 /* DeviceFingerprint.swift in Sources */,
+				43C2E1815CDD7FEFE2072574 /* ExamView.swift in Sources */,
+				BDAD1A5092BA26125CAD1F84 /* ExamWebView.swift in Sources */,
+				8A60A0AF18A3340BF7D7C2DA /* ExambroApp.swift in Sources */,
+				C8B14450E553318056AF8EA5 /* LockdownCheckView.swift in Sources */,
+				14139CF1EBC5E29A98A73412 /* LoginView.swift in Sources */,
+				3D0056C534B69201EA8B1D90 /* Models.swift in Sources */,
+				FF2357B22F32BD0E4B299C4F /* NetworkMonitor.swift in Sources */,
+				144A28C268B03B8647394967 /* QRScanView.swift in Sources */,
+				A734B07EF2A5DBE531976230 /* RealtimeWebSocketClient.swift in Sources */,
+				24D251F76AA7E041EDEF374C /* ScreenshotService.swift in Sources */,
+				5066820593300711B53DA6C7 /* SecurityMonitorService.swift in Sources */,
+				3C4888256A810CEBD26471E5 /* TOTPUtil.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0A21911860F83903A4FF2878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		560753C154C8008201AFDCC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6589229FF6FE4261C4F35AB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = ExambroiOS/ExambroiOS.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YY8AKLJ4J9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = ExambroiOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AgreXambro;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.muizexambro.ios;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D2E78D522B5C1902054FA1EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = ExambroiOS/ExambroiOS.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YY8AKLJ4J9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = ExambroiOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AgreXambro;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.muizexambro.ios;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		150718D8D5539F8334DD0526 /* Build configuration list for PBXProject "ExambroiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				560753C154C8008201AFDCC7 /* Debug */,
+				0A21911860F83903A4FF2878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C1CC68CBC00AE2F994D55776 /* Build configuration list for PBXNativeTarget "ExambroiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6589229FF6FE4261C4F35AB8 /* Debug */,
+				D2E78D522B5C1902054FA1EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 68811AC8E6A93ACA8CDE9BA0 /* Project object */;
+}

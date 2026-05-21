@@ -1,0 +1,53 @@
+name: ExambroiOS
+options:
+  deploymentTarget:
+    iOS: "16.0"
+  bundleIdPrefix: com.exambro
+  createIntermediateGroups: true
+  usesTabs: false
+  indentWidth: 4
+  tabWidth: 4
+
+packages: {}
+
+targets:
+  ExambroiOS:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - path: ExambroiOS
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.exambro.ios
+        SWIFT_VERSION: "5.9"
+        IPHONEOS_DEPLOYMENT_TARGET: "16.0"
+        INFOPLIST_FILE: ExambroiOS/Info.plist
+        MARKETING_VERSION: "1.0.0"        # 3-segmen semver, sinkron dengan Server B
+        CURRENT_PROJECT_VERSION: "1"
+        APP_STORE_ID: "0000000000"        # ganti setelah dapat ID dari App Store Connect
+        CODE_SIGN_STYLE: Automatic
+        ENABLE_HARDENED_RUNTIME: YES
+        # Allow HTTP for local server (development)
+        SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG
+      configs:
+        Debug:
+          SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG
+          SWIFT_OPTIMIZATION_LEVEL: "-Onone"
+        Release:
+          SWIFT_OPTIMIZATION_LEVEL: "-O"
+    entitlements:
+      path: ExambroiOS/ExambroiOS.entitlements
+    scheme:
+      testTargets: []
+      gatherCoverageData: false
+
+schemes:
+  ExambroiOS:
+    build:
+      targets:
+        ExambroiOS: all
+    run:
+      config: Debug
+    archive:
+      config: Release
