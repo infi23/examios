@@ -1,0 +1,13 @@
+*.exe
+*.test
+*.out
+*.log
+.git
+.gitignore
+.vscode
+.idea
+Dockerfile
+.dockerignore
+README.md
+tmp/
+bin/
