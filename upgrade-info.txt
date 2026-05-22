@@ -1,0 +1,34 @@
+Berikut adalah penjelasan rinci mengenai kedua poin yang Anda tanyakan:
+
+---
+
+### 1. Mengenai `X-Agrexambro-Key` dan Validasi Moodle
+
+**Benar, validasi header hanya dilakukan pada request pertama, dan setelah itu Moodle mengandalkan Session Cookie (`MoodleSession`).**
+
+* **Cara Kerja**:
+  1. **Request Awal**: Saat aplikasi AgreXambro pertama kali memuat URL Moodle via WebView, ia menyuntikkan header `X-Agrexambro-Key`.
+  2. **Verifikasi Server**: Plugin Moodle (`quizaccess_agrexambro`) menerima request tersebut, memvalidasi kecocokan key, lalu menyimpan status verifikasi ke dalam objek sesi Moodle:
+     ```php
+     $SESSION->agrexambro_verified = true;
+     ```
+  3. **Delegasi ke Cookie**: Moodle akan mengirimkan session cookie standar (`MoodleSession`) kembali ke WebView klien.
+  4. **Navigasi Selanjutnya**: Pada klik tombol berikutnya (seperti pindah halaman soal, submit jawaban, dll.), WebView tidak perlu mengirimkan header `X-Agrexambro-Key` lagi. Moodle otomatis mengenali siswa tersebut aman karena cookie sesi yang dikirimkan cocok dengan session server-side yang sudah diset `$SESSION->agrexambro_verified = true`.
+
+* **Keuntungan**: Pendekatan berbasis sesi Moodle ini sangat efisien dan mencegah masalah pemutusan akses kuis di tengah jalan akibat hilangnya header kustom pada request internal AJAX atau navigasi sekunder WebView.
+
+---
+
+### 2. Penanganan Deep Link Jika User ID Masih Kosong
+
+Ketika siswa mengklik tautan peluncuran `agrexambro://` dari Safari/Chrome tetapi **User ID / NIS** belum terisi di aplikasi:
+
+1. **Peringatan Muncul**:
+   Aplikasi iOS akan menampilkan dialog alert bertuliskan:  
+   *"Masukkan User ID terlebih dahulu sebelum membuka link ujian!"*
+2. **Pengisian User ID**:
+   Siswa tetap berada di layar Login aplikasi dan harus mengetikkan User ID mereka terlebih dahulu.
+3. **Membuka Kembali Link**:
+   Setelah siswa selesai mengisi User ID, mereka tinggal kembali ke browser Safari/Chrome dan **mengetuk kembali tautan peluncuran ujian**. Kali ini, karena User ID sudah terisi, aplikasi akan langsung meloloskan mereka ke layar persiapan ujian (`LockdownCheckView`) dan mengarahkannya ke halaman kuis spesifik tersebut (`targetUrl`).
+
+*Catatan: Alur penanganan ini sepenuhnya konsisten dan sama persis (1:1) dengan perilaku aplikasi Android Agrexambro.*
