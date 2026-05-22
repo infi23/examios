@@ -5,6 +5,7 @@ import UIKit
 /// Memastikan device siap & siswa berkomitmen sebelum sesi dimulai.
 struct LockdownCheckView: View {
     let studentId: String
+    let targetUrl: String?
     @StateObject private var vm = LockdownCheckViewModel()
 
     var body: some View {
@@ -151,7 +152,7 @@ struct LockdownCheckView: View {
         VStack(spacing: 10) {
             Button(action: {
                 if vm.allChecksPass {
-                    AppNavigator.shared.goToExam(studentId: studentId)
+                    AppNavigator.shared.goToExam(studentId: studentId, targetUrl: targetUrl)
                 }
             }) {
                 HStack {

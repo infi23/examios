@@ -8,6 +8,7 @@ final class ConfigManager {
         static let moodleUrl = "moodle_url"
         static let securityApiUrl = "security_api_url"
         static let realtimeApiUrl = "realtime_api_url"
+        static let moodleSecret = "moodle_secret"
     }
 
     private init() {}
@@ -15,6 +16,7 @@ final class ConfigManager {
     var moodleUrl: String { defaults.string(forKey: Key.moodleUrl) ?? "" }
     var securityApiUrl: String { defaults.string(forKey: Key.securityApiUrl) ?? "" }
     var realtimeApiUrl: String { defaults.string(forKey: Key.realtimeApiUrl) ?? "" }
+    var moodleSecret: String { defaults.string(forKey: Key.moodleSecret) ?? "" }
 
     var isConfigured: Bool {
         !moodleUrl.isEmpty && !securityApiUrl.isEmpty
@@ -33,10 +35,11 @@ final class ConfigManager {
         securityApiUrl.lowercased().hasPrefix("http://")
     }
 
-    func saveConfig(moodleUrl: String, securityApiUrl: String, realtimeApiUrl: String) {
+    func saveConfig(moodleUrl: String, securityApiUrl: String, realtimeApiUrl: String, moodleSecret: String = "") {
         defaults.set(moodleUrl, forKey: Key.moodleUrl)
         defaults.set(securityApiUrl, forKey: Key.securityApiUrl)
         defaults.set(realtimeApiUrl, forKey: Key.realtimeApiUrl)
+        defaults.set(moodleSecret, forKey: Key.moodleSecret)
     }
 
     // MARK: — Session persistence (mirrors Android SharedPreferences)

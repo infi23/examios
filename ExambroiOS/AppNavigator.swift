@@ -2,8 +2,8 @@ import SwiftUI
 
 /// Route untuk alur ujian.
 enum ExamRoute: Hashable {
-    case lockdown(studentId: String)
-    case exam(studentId: String)
+    case lockdown(studentId: String, targetUrl: String?)
+    case exam(studentId: String, targetUrl: String?)
 }
 
 /// Koordinator navigasi global berbasis NavigationPath.
@@ -24,12 +24,12 @@ final class AppNavigator: ObservableObject {
 
     private init() {}
 
-    func goToLockdown(studentId: String) {
-        path.append(ExamRoute.lockdown(studentId: studentId))
+    func goToLockdown(studentId: String, targetUrl: String? = nil) {
+        path.append(ExamRoute.lockdown(studentId: studentId, targetUrl: targetUrl))
     }
 
-    func goToExam(studentId: String) {
-        path.append(ExamRoute.exam(studentId: studentId))
+    func goToExam(studentId: String, targetUrl: String? = nil) {
+        path.append(ExamRoute.exam(studentId: studentId, targetUrl: targetUrl))
     }
 
     /// Kembali ke root (LoginView) — buang semua screen di atasnya.

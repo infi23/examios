@@ -5,18 +5,21 @@ import ReplayKit
 
 struct ExamView: View {
     let studentId: String
+    let targetUrl: String?
 
     @StateObject private var vm: ExamViewModel
 
-    init(studentId: String) {
+    init(studentId: String, targetUrl: String? = nil) {
         self.studentId = studentId
+        self.targetUrl = targetUrl
         _vm = StateObject(wrappedValue: ExamViewModel(studentId: studentId))
     }
 
     var body: some View {
         ZStack {
             // Main WebView
-            if let moodleURL = URL(string: ConfigManager.shared.moodleUrl) {
+            if let urlString = targetUrl ?? (ConfigManager.shared.moodleUrl.isEmpty ? nil : ConfigManager.shared.moodleUrl),
+               let moodleURL = URL(string: urlString) {
                 ExamWebView(
                     url: moodleURL,
                     isLoading: $vm.isWebLoading,

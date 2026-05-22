@@ -166,11 +166,11 @@ struct LoginView: View {
             }
             .navigationDestination(for: ExamRoute.self) { route in
                 switch route {
-                case .lockdown(let sid):
-                    LockdownCheckView(studentId: sid)
+                case .lockdown(let sid, let target):
+                    LockdownCheckView(studentId: sid, targetUrl: target)
                         .navigationBarBackButtonHidden(true)
-                case .exam(let sid):
-                    ExamView(studentId: sid)
+                case .exam(let sid, let target):
+                    ExamView(studentId: sid, targetUrl: target)
                         .navigationBarBackButtonHidden(true)
                 }
             }
@@ -193,6 +193,29 @@ struct LoginView: View {
             if newValue {
                 nav.goToLockdown(studentId: vm.studentId)
                 vm.startExam = false // reset trigger
+            }
+        }
+        .onOpenURL { url in
+            if url.scheme == "agrexambro" {
+                let originalUrl = url.absoluteString
+                var targetUrl = originalUrl
+                if targetUrl.lowercased().hasPrefix("agrexambro://") {
+                    let suffix = targetUrl.dropFirst("agrexambro://".count)
+                    targetUrl = "https://\(suffix)"
+                }
+                
+                if ConfigManager.shared.isConfigured {
+                    let sid = vm.studentId.trimmingCharacters(in: .whitespacesAndNewlines)
+                    if !sid.isEmpty {
+                        nav.goToLockdown(studentId: sid, targetUrl: targetUrl)
+                    } else {
+                        vm.errorMessage = "Masukkan User ID terlebih dahulu sebelum membuka link ujian!"
+                        vm.showError = true
+                    }
+                } else {
+                    vm.errorMessage = "Aplikasi belum dikonfigurasi. Silakan scan QR code proktor terlebih dahulu."
+                    vm.showError = true
+                }
             }
         }
     }
@@ -332,12 +355,15 @@ final class LoginViewModel: ObservableObject {
                 return
             }
 
+            let moodleSecret = obj["moodle_secret"] as? String ?? ""
+
             // Field `mode` & `expires_at` di QR (jika ada) diabaikan —
             // pelonggaran lockdown kini ditentukan oleh akun demo, bukan mode config.
             ConfigManager.shared.saveConfig(
                 moodleUrl: moodleUrl,
                 securityApiUrl: securityUrl,
-                realtimeApiUrl: obj["realtime_api_url"] as? String ?? ""
+                realtimeApiUrl: obj["realtime_api_url"] as? String ?? "",
+                moodleSecret: moodleSecret
             )
             refreshStatus()
         } catch {

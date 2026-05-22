@@ -23,6 +23,7 @@ struct ExamWebView: UIViewRepresentable {
         config.websiteDataStore = WKWebsiteDataStore.nonPersistent() // Clear cookies/cache setiap sesi
 
         let wv = WKWebView(frame: .zero, configuration: config)
+        wv.customUserAgent = "Mozilla/5.0 (iPad; CPU OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Agrexambro/1.0.0"
         wv.navigationDelegate = context.coordinator
         wv.uiDelegate = context.coordinator
         wv.scrollView.bounces = false
@@ -36,7 +37,13 @@ struct ExamWebView: UIViewRepresentable {
         context.coordinator.webView = wv
         // Expose WKWebView ke ScreenshotService agar bisa di-snapshot dari ViewModel
         ScreenshotService.shared.webView = wv
-        wv.load(URLRequest(url: url))
+        
+        var request = URLRequest(url: url)
+        let secret = ConfigManager.shared.moodleSecret
+        if !secret.isEmpty {
+            request.setValue(secret, forHTTPHeaderField: "X-Agrexambro-Key")
+        }
+        wv.load(request)
         return wv
     }
 
@@ -60,9 +67,13 @@ struct ExamWebView: UIViewRepresentable {
                 case "onQuizStateDetected": self.parent.onQuizStateDetected(arg)
                 case "onMoodleUserDetected": self.parent.onMoodleUserDetected(arg)
                 case "reconnectMoodle":
-                    if let url = URL(string: ConfigManager.shared.moodleUrl) {
-                        self.webView?.load(URLRequest(url: url))
+                    let urlToLoad = self.webView?.url ?? self.parent.url
+                    var request = URLRequest(url: urlToLoad)
+                    let secret = ConfigManager.shared.moodleSecret
+                    if !secret.isEmpty {
+                        request.setValue(secret, forHTTPHeaderField: "X-Agrexambro-Key")
                     }
+                    self.webView?.load(request)
                 default: break
                 }
             }

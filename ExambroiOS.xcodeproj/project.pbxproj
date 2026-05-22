@@ -26,12 +26,14 @@
 		A734B07EF2A5DBE531976230 /* RealtimeWebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7467D862D08E4C4552EEB /* RealtimeWebSocketClient.swift */; };
 		BDAD1A5092BA26125CAD1F84 /* ExamWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D07965B9250EE51CA5E117 /* ExamWebView.swift */; };
 		C8B14450E553318056AF8EA5 /* LockdownCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E994505C9C14136B5C601F /* LockdownCheckView.swift */; };
+		F46A9EEB3CFAFE05857970F5 /* UpdateRequiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C479FB7ECB9FCBEEF27B21A /* UpdateRequiredView.swift */; };
 		FF2357B22F32BD0E4B299C4F /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F53BB7858852421D43659 /* NetworkMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		17C7467D862D08E4C4552EEB /* RealtimeWebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeWebSocketClient.swift; sourceTree = "<group>"; };
 		19D07965B9250EE51CA5E117 /* ExamWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamWebView.swift; sourceTree = "<group>"; };
+		1C479FB7ECB9FCBEEF27B21A /* UpdateRequiredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRequiredView.swift; sourceTree = "<group>"; };
 		3494F176F8C0387D339EF5FA /* ScreenshotService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotService.swift; sourceTree = "<group>"; };
 		383FC5406B80747BC70D0063 /* SecurityMonitorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityMonitorService.swift; sourceTree = "<group>"; };
 		3E814F03B977468835F14C21 /* TOTPUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPUtil.swift; sourceTree = "<group>"; };
@@ -50,8 +52,8 @@
 		AC40A79FA91FA0FF56E5B60A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AD5DB3AB05F59EA90A554B46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBFC994DFA99258026D8A638 /* ExamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamView.swift; sourceTree = "<group>"; };
-		D64EBFB67D2F65C681C0B9FD /* ExambroiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExambroiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD4D29C2F0CEE20A6AA5CB87 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		D64EBFB67D2F65C681C0B9FD /* ExambroiOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ExambroiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD4D29C2F0CEE20A6AA5CB87 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		E73A295B7F16C508AA5DBC86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 		A026D471BC250CC9EE66C73E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1C479FB7ECB9FCBEEF27B21A /* UpdateRequiredView.swift */,
 				9C278E452FFB150D102F1748 /* Exam */,
 				72BC402CE669DEAB4A91FDA8 /* Login */,
 			);
@@ -257,6 +260,7 @@
 				24D251F76AA7E041EDEF374C /* ScreenshotService.swift in Sources */,
 				5066820593300711B53DA6C7 /* SecurityMonitorService.swift in Sources */,
 				3C4888256A810CEBD26471E5 /* TOTPUtil.swift in Sources */,
+				F46A9EEB3CFAFE05857970F5 /* UpdateRequiredView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,28 +390,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = ExambroiOS/ExambroiOS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YY8AKLJ4J9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = ExambroiOS/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = AgreXambro;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.muizexambro.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exambro.ios;
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.9;
@@ -419,28 +415,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = ExambroiOS/ExambroiOS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YY8AKLJ4J9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = ExambroiOS/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = AgreXambro;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.muizexambro.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exambro.ios;
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.9;
